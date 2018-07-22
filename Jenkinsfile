@@ -8,7 +8,7 @@ node {
   stage("Build")
   {
      sh 'echo "build stage"'
-     sh 'java --version'
+     sh 'java -version'
   }
 
   stage("Static Analysis")
