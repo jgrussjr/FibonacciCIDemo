@@ -1,13 +1,13 @@
 node {
   stage("Checkout")
   {
-     sh 'checkout stage'
+     sh 'echo "checkout stage"'
      //sh 'git submodule update --init'
   }
 
   stage("Build")
   {
-     sh 'build stage'
+     sh 'echo "build stage"'
      sh 'java --version'
   }
 
