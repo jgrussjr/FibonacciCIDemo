@@ -2,8 +2,6 @@ node {
   stage("Checkout")
   {
      sh 'checkout stage'
-     scm_vars = checkout scm
-
      //sh 'git submodule update --init'
   }
 
