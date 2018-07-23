@@ -9,6 +9,7 @@ node {
   {
      sh 'echo "build stage"'
      sh 'java -version'
+     sh 'ant -version'
   }
 
   stage("Static Analysis")
