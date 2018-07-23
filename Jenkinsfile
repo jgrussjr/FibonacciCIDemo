@@ -9,7 +9,17 @@ node {
   {
      sh 'echo "build stage"'
      sh 'java -version'
-     sh 'ant -version'
+    
+     withAnt(installation: 'antinstall') {
+       dir("scoring") {
+         if (isUnix()) {
+           sh "ant -version"
+         }
+         else {
+          bat "ant -version"
+         }
+       }
+     }
   }
 
   stage("Static Analysis")
