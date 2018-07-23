@@ -7,6 +7,9 @@ node {
 
   stage("Build")
   {
+     env.JAVA_HOME="${tool 'myjdk'}"
+     env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+     
      sh 'echo "build stage"'
      sh 'java -version'
     
