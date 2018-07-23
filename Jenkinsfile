@@ -16,10 +16,10 @@ node {
      withAnt(installation: 'antinstall') {
        dir("scoring") {
          if (isUnix()) {
-           sh "ant -version"
+           sh "ant"
          }
          else {
-          bat "ant -version"
+          bat "ant"
          }
        }
      }
